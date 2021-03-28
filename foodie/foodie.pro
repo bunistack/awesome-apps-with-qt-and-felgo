@@ -25,7 +25,8 @@ assetsFolder.source = assets
 
 RESOURCES += resources.qrc
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    utility.cpp
 
 android {
     ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
@@ -44,3 +45,6 @@ win32 {
 macx {
     ICON = macx/app_icon.icns
 }
+
+HEADERS += \
+    utility.h

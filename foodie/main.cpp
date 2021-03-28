@@ -1,6 +1,9 @@
 #include <QApplication>
 #include <FelgoApplication>
+#include <QQmlContext>
 #include <QQmlApplicationEngine>
+
+#include "utility.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,6 +14,15 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     felgo.initialize(&engine);
+
+    // handles simple utility functions
+    Utility *utility = new Utility(&engine);
+
+    engine.rootContext()->setContextProperty("Utility",utility);
+
+    // register singletons
+    qmlRegisterSingletonType(QUrl("qrc:/qml/singletons/AppUtil.qml"),"AppUtil",1,0,"AppUtil");
+    qmlRegisterSingletonType(QUrl("qrc:/qml/singletons/SVG.qml"),"SVG",1,0,"SVG");
 
     felgo.setMainQmlFileName(QStringLiteral("qrc:/qml/Main.qml"));
 
