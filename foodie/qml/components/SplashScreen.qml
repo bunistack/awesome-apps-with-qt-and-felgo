@@ -50,10 +50,12 @@ Window{
                     height: parent.height
 
                     Image {
+                        id: bouncingImage
                         width: 30
                         height: 30
                         source: "qrc:/assets/images/icons/color/pie_color.png"
                         sourceSize: Qt.size(width,height)
+                        anchors.horizontalCenter: parent.horizontalCenter
                     }
                 }
 
@@ -64,7 +66,7 @@ Window{
                     font.pixelSize: 15
                     font.bold: true
                     font.family: AppUtil.font1.name
-                    color: "#444B54"
+                    color: AppUtil.textColor
                     text: "version " + AppUtil.appConfiguration.versionname
                 }
             }
@@ -73,13 +75,36 @@ Window{
 
     }
 
+    SequentialAnimation{
+        running: true
+        loops: Animation.Infinite
+
+        PropertyAnimation{
+            target: bouncingImage
+            property: "y"
+            from: 0
+            to: 10
+            duration: 400
+            easing.type: Easing.InOutQuad
+        }
+
+        PropertyAnimation{
+            target: bouncingImage
+            property: "y"
+            from: 10
+            to: 0
+            duration: 400
+            easing.type: Easing.InOutQuad
+        }
+    }
+
     Connections{
         target: mainWindow
 
         onSplashScreenFinished: {
-//            mainWindow.opacity = 1;
-//            closeAppOnClosed = false;
-//            splashScreen.close();
+            mainWindow.opacity = 1;
+            closeAppOnClosed = false;
+            splashScreen.close();
         }
     }
 }

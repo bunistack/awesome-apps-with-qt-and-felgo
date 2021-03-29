@@ -8,5 +8,16 @@
         <file>qml/singletons/SVG.qml</file>
         <file>assets/images/icons/color/pie_color.png</file>
         <file>assets/fonts/VarelaRound-Regular.ttf</file>
+        <file>qml/pages/OnboardingScreen.qml</file>
+        <file>qml/controls/FelgoNavigationStack.qml</file>
+        <file>qml/controls/FelgoPage.qml</file>
+        <file>assets/images/illustrations/on_the_way.svg</file>
+        <file>assets/images/illustrations/online_groceries.svg</file>
+        <file>assets/images/illustrations/order_confirmed.svg</file>
+        <file>assets/images/illustrations/package_arrived.svg</file>
+        <file>qml/controls/PageIndicatorStyle1.qml</file>
+        <file>qml/controls/TextButton.qml</file>
+        <file>qml/controls/MaterialButton.qml</file>
+        <file>qml/controls/ShadowedRectangle.qml</file>
     </qresource>
 </RCC>

@@ -51,6 +51,9 @@ QtObject {
         source: "qrc:/assets/fonts/VarelaRound-Regular.ttf"
     }
 
+    property color textColor: "#444B54"
+    property color themeColor: "#FFC107"
+
     // defines the app configuration; data is fetched from config.json
     property var appConfiguration
 
