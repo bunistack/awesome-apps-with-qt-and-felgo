@@ -19,5 +19,14 @@
         <file>qml/controls/TextButton.qml</file>
         <file>qml/controls/MaterialButton.qml</file>
         <file>qml/controls/ShadowedRectangle.qml</file>
+        <file>qml/pages/Home.qml</file>
+        <file>assets/images/icons/hamburger_menu_grey.png</file>
+        <file>qml/components/NavigationDrawer.qml</file>
+        <file>assets/images/logos/logo_long_transparent.png</file>
+        <file>qml/models/DrawerModel.qml</file>
+        <file>assets/images/icons/home_grey.png</file>
+        <file>assets/images/icons/hot_breakfast_grey.png</file>
+        <file>assets/images/icons/mastercard_grey.png</file>
+        <file>assets/images/icons/mobile_shopping_grey.png</file>
     </qresource>
 </RCC>

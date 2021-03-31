@@ -221,6 +221,10 @@ FelgoPage {
             height: 40
             buttonText.text: "Skip"
             buttonText.horizontalAlignment: Text.AlignHCenter
+
+            onClicked: {
+                root.navigationStack.clearAndPush(Qt.resolvedUrl("Home.qml"));
+            }
         }
 
         PageIndicatorStyle1 {
@@ -249,6 +253,10 @@ FelgoPage {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
+
+        onClicked: {
+            root.navigationStack.clearAndPush(Qt.resolvedUrl("Home.qml"));
+        }
     }
 
     // end of root
