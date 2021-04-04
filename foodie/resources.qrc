@@ -28,5 +28,6 @@
         <file>assets/images/icons/hot_breakfast_grey.png</file>
         <file>assets/images/icons/mastercard_grey.png</file>
         <file>assets/images/icons/mobile_shopping_grey.png</file>
+        <file>qml/controls/CustomScrollView.qml</file>
     </qresource>
 </RCC>

@@ -8,7 +8,7 @@ ListModel {
     }
 
     ListElement{
-        itemText: "Foods"
+        itemText: "Food & Drinks"
         itemIcon: "qrc:/assets/images/icons/hot_breakfast_grey.png"
     }
 

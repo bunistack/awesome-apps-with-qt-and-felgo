@@ -27,9 +27,12 @@ App {
         anchors.leftMargin: (navigationDrawer.position * navigationDrawer.width)
         transformOrigin: Item.Left
         scale: 1 - (navigationDrawer.position * 0.2)
+        clip: true
+        radius: navigationDrawer.position * 16
 
         Column{
             anchors.fill: parent
+            anchors.margins: navigationDrawer.position * parent.radius
 
             // status bar
             Rectangle{

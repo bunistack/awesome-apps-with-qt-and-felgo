@@ -7,7 +7,7 @@ import "../models"
 Drawer {
     id: root
     edge: Qt.LeftEdge
-    width: 240
+    width: 220
     height: parent.height
     modal: false
 
