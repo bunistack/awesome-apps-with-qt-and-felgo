@@ -14,6 +14,10 @@ QtObject {
      * function definitions start here
     **********************************************/
 
+    function randomInteger(limit){
+        return Math.floor(Math.random() * limit);
+    }
+
     // checks if mobile
     function isMobile(){
         return Theme.isAndroid || Theme.isIos;

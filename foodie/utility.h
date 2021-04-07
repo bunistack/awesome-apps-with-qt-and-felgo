@@ -17,6 +17,8 @@ public:
 
     Q_INVOKABLE static QString readFile(QString filename, QIODevice::OpenMode flags = QIODevice::ReadOnly);
 
+    Q_INVOKABLE QString currencyFormat(double value);
+
 signals:
 
 

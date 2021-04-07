@@ -18,3 +18,8 @@ QString Utility::readFile(QString filename, QIODevice::OpenMode flags)
     file.close();
     return QString::fromStdString(data.toStdString());
 }
+
+QString Utility::currencyFormat(double value)
+{
+    return QString("%L1").arg(value, 0, 'f', 2);
+}

@@ -54,5 +54,10 @@
         <file>assets/images/foods/soft-drinks/k+-sports-drink.png</file>
         <file>assets/images/foods/soft-drinks/monster-energy-drink.png</file>
         <file>assets/images/icons/pastel/medium/beef_burger_psatel.png</file>
+        <file>qml/components/FoodListCard.qml</file>
+        <file>qml/models/FoodsListModel.qml</file>
+        <file>assets/images/icons/add_to_cart_grey.png</file>
+        <file>assets/images/icons/rating_grey.png</file>
+        <file>qml/pages/Foods.qml</file>
     </qresource>
 </RCC>

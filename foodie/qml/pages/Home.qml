@@ -8,6 +8,10 @@ import "../models"
 FelgoPage {
     id: root
 
+    Component.onCompleted: {
+        generatePopularFoods();
+    }
+
     Column{
         anchors.fill: parent
 
@@ -15,7 +19,7 @@ FelgoPage {
             id: header
             width: parent.width
             height: 60
-            shadowEnabled: scrollView.position
+            shadowEnabled: scrollView.position > 0 && !navigationDrawer.opened
             z: 5
 
             Row {
@@ -59,7 +63,7 @@ FelgoPage {
                     let cols = Math.floor(width/360);
 
                     if(cols < 2){
-                        leftPadding = (width-320)/2 < 20 ? 20 : (width-320)/2;
+                        leftPadding = (width-320)/2 < 15 ? 15 : (width-320)/2;
                         return;
                     }
 
@@ -111,6 +115,14 @@ FelgoPage {
                     }
                 }
 
+                Repeater{
+                    model: popularFoods
+
+                    FoodListCard{
+
+                    }
+                }
+
                 // end of flow
             }
 
@@ -118,6 +130,58 @@ FelgoPage {
         }
 
         // end of Column
+    }
+
+    ListModel{
+        id: popularFoods
+    }
+
+    FoodsListModel{
+        id: foodsListModel
+    }
+
+    Connections{
+        target: navigationDrawer
+
+        onMenuItemClicked: {
+
+            switch(index){
+            case 0:
+                root.navigationStack.popAllExceptFirst();
+                break;
+            case 1:
+                root.navigationStack.popAllExceptFirstAndPush(Qt.resolvedUrl("Foods.qml"));
+                break;
+            default:
+                break;
+            }
+        }
+    }
+
+    function generatePopularFoods(){
+
+        let popularFoodsIndexes = [];
+
+        while(true){
+
+            let index = AppUtil.randomInteger(foodsListModel.count);
+
+            if(popularFoodsIndexes.includes(index)){
+                continue;
+            }
+
+            popularFoodsIndexes.push(index);
+
+            let food = foodsListModel.get(index);
+
+            popularFoods.append(food);
+
+            if(popularFoods.count >= 5){
+                break;
+            }
+
+        }
+
     }
 
     // end of root
