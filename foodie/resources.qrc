@@ -35,5 +35,24 @@
         <file>assets/images/icons/pastel/paprika_pastel.png</file>
         <file>qml/components/CategoryListCard.qml</file>
         <file>assets/images/icons/pastel/fried_chicken_pastel.png</file>
+        <file>assets/images/foods/cake-and-bread/cup-cake.png</file>
+        <file>assets/images/foods/cake-and-bread/mini-cinnamon-rolls.png</file>
+        <file>assets/images/foods/fries-and-chicken/chicken-and-chips.png</file>
+        <file>assets/images/foods/fries-and-chicken/dominos-fried-chicken.png</file>
+        <file>assets/images/foods/fries-and-chicken/kfc-chicken-wings.png</file>
+        <file>assets/images/foods/fries-and-chicken/meat-potato-chips-and-chicken.png</file>
+        <file>assets/images/foods/groceries/cauliflower.png</file>
+        <file>assets/images/foods/groceries/cucumber.png</file>
+        <file>assets/images/foods/groceries/red-pepper.png</file>
+        <file>assets/images/foods/groceries/tomato.png</file>
+        <file>assets/images/foods/pizza/italian-vegetarian-pizza.png</file>
+        <file>assets/images/foods/pizza/kebab-pizza.png</file>
+        <file>assets/images/foods/pizza/olive-mixed-pizza.png</file>
+        <file>assets/images/foods/pizza/primavera-pizza.png</file>
+        <file>assets/images/foods/soft-drinks/cosmic-glow-energy-drink.png</file>
+        <file>assets/images/foods/soft-drinks/day-dream-cream-soda.png</file>
+        <file>assets/images/foods/soft-drinks/k+-sports-drink.png</file>
+        <file>assets/images/foods/soft-drinks/monster-energy-drink.png</file>
+        <file>assets/images/icons/pastel/medium/beef_burger_psatel.png</file>
     </qresource>
 </RCC>
