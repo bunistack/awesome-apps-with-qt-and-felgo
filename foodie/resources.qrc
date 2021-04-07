@@ -6,7 +6,6 @@
         <file>assets/images/logos/logo_transparent.png</file>
         <file>qml/singletons/AppUtil.qml</file>
         <file>qml/singletons/SVG.qml</file>
-        <file>assets/images/icons/color/pie_color.png</file>
         <file>assets/fonts/VarelaRound-Regular.ttf</file>
         <file>qml/pages/OnboardingScreen.qml</file>
         <file>qml/controls/FelgoNavigationStack.qml</file>
@@ -29,5 +28,12 @@
         <file>assets/images/icons/mastercard_grey.png</file>
         <file>assets/images/icons/mobile_shopping_grey.png</file>
         <file>qml/controls/CustomScrollView.qml</file>
+        <file>assets/images/icons/pastel/pizza_pastel.png</file>
+        <file>qml/models/CategoriesModel.qml</file>
+        <file>assets/images/icons/pastel/cake_pastel.png</file>
+        <file>assets/images/icons/pastel/cola_pastel.png</file>
+        <file>assets/images/icons/pastel/paprika_pastel.png</file>
+        <file>qml/components/CategoryListCard.qml</file>
+        <file>assets/images/icons/pastel/fried_chicken_pastel.png</file>
     </qresource>
 </RCC>

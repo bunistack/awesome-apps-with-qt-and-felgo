@@ -1,10 +1,12 @@
 import QtQuick 2.12
 import AppUtil 1.0
 
+import "../components"
 import "../controls"
+import "../models"
 
 FelgoPage {
-    id: root   
+    id: root
 
     Column{
         anchors.fill: parent
@@ -65,6 +67,7 @@ FelgoPage {
 
                 }
 
+                // categories
                 Item {
                     width: parent.width - (parent.leftPadding * 2)
                     height: 35
@@ -73,6 +76,34 @@ FelgoPage {
                         width: contentWidth
                         height: parent.height
                         text: "Categories"
+                        font.family: AppUtil.font1.name
+                        font.pixelSize: 18
+                        font.bold: true
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+
+                ListView{
+                    width: parent.width - (parent.leftPadding * 2)
+                    height: 140
+                    spacing: 20
+                    orientation: ListView.Horizontal
+                    model: CategoriesModel{}
+
+                    delegate: CategoryListCard{
+
+                    }
+                }
+
+                // popular
+                Item {
+                    width: parent.width - (parent.leftPadding * 2)
+                    height: 35
+
+                    Text {
+                        width: contentWidth
+                        height: parent.height
+                        text: "Popular"
                         font.family: AppUtil.font1.name
                         font.pixelSize: 18
                         font.bold: true

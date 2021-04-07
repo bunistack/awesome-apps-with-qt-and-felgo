@@ -53,7 +53,7 @@ Window{
                         id: bouncingImage
                         width: 30
                         height: 30
-                        source: "qrc:/assets/images/icons/color/pie_color.png"
+                        source: "qrc:/assets/images/icons/pastel/pizza_pastel.png"
                         sourceSize: Qt.size(width,height)
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
