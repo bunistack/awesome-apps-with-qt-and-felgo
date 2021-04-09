@@ -12,6 +12,10 @@ App {
     opacity: 0
     color: AppUtil.themeColor
 
+    property bool showCartButton: false
+
+    property int totalCartQuantity: 0
+
     onSplashScreenFinished: {
         mainNavigationStack.push(Qt.resolvedUrl("./pages/OnboardingScreen.qml"));
     }
@@ -52,6 +56,11 @@ App {
                     anchors.fill: parent
                 }
 
+                // cart action button
+                CartButton{
+                    visible: showCartButton
+                }
+
             }
 
             // end of Column
@@ -61,6 +70,57 @@ App {
 
     NavigationDrawer{
         id: navigationDrawer
+    }
+
+    ListModel{
+        id: cartListModel
+    }
+
+    function addToCart(food){
+
+        let cartItem = existsInCart(food);
+
+        if(cartItem === false){
+            food['quantity'] = 1;
+            cartListModel.append(food);
+        }else{
+            cartItem['quantity'] += 1;
+        }
+
+        computeTotalQuantity();
+
+    }
+
+    function removeFromCart(index){
+        cartListModel.remove(index);
+        computeTotalQuantity();
+    }
+
+    function existsInCart(food){
+
+        for(let i=0; i<cartListModel.count; i++){
+
+            let cartItem = cartListModel.get(i);
+
+            if(cartItem.name === food.name){
+                return cartItem;
+            }
+        }
+
+        return false;
+    }
+
+    function computeTotalQuantity(){
+
+        totalCartQuantity = 0;
+
+        for(let i=0; i<cartListModel.count; i++){
+
+            let cartItem = cartListModel.get(i);
+
+            totalCartQuantity += cartItem.quantity;
+        }
+
     }
 
     // end of root

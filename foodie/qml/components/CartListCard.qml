@@ -50,48 +50,39 @@ ShadowedRectangle {
             Row{
                 width: parent.width
                 height: 40
-                spacing: 50
+                spacing: 20
 
                 IconButton{
                     size: 35
                     anchors.verticalCenter: parent.verticalCenter
                     iconMargins: 7
-                    icon.source: "qrc:/assets/images/icons/add_to_cart_grey.png"
+                    icon.source: "qrc:/assets/images/icons/trash_grey.png"
 
                     onClicked: {
-                        addToCart({
-                                      name: name,
-                                      price: price,
-                                      photo: photo,
-                                      rating: rating,
-                                      category: category
-                                  });
+                        removeFromCart();
                     }
                 }
 
-                Row{
-                    width: childrenRect.width
-                    height: parent.height
-                    spacing: 5
-
-                    Image{
-                        width: 20
-                        height: 20
-                        sourceSize: Qt.size(width,height)
-                        anchors.verticalCenter: parent.verticalCenter
-                        source: "qrc:/assets/images/icons/rating_grey.png"
+                SpinBoxStyle1{
+                    id: spinBox
+                    width: 100
+                    height: 40
+                    from: 1
+                    value: quantity
+                    editable: false
+                    validator: IntValidator {
+                        bottom: spinBox.from
                     }
 
-                    Text {
-                        width: contentWidth
-                        height: parent.height
-                        verticalAlignment: Text.AlignVCenter
-                        text: rating
-                        font.family: AppUtil.font1.name
-                        font.pixelSize: 15
+                    onValueChanged: {
+                        quantity = value;
+                        computeTotalQuantity();
                     }
+
                 }
+
             }
+
         }
 
         // end of row

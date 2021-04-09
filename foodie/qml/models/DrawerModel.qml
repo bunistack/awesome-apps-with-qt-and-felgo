@@ -13,8 +13,8 @@ ListModel {
     }
 
     ListElement{
-        itemText: "Orders"
-        itemIcon: "qrc:/assets/images/icons/mobile_shopping_grey.png"
+        itemText: "Cart"
+        itemIcon: "qrc:/assets/images/icons/shopping_cart_grey.png"
     }
 
     ListElement{

@@ -12,6 +12,10 @@ FelgoPage {
         generatePopularFoods();
     }
 
+    onAppeared: {
+        mainAppWindow.showCartButton = true;
+    }
+
     Column{
         anchors.fill: parent
 
@@ -63,13 +67,30 @@ FelgoPage {
                     let cols = Math.floor(width/360);
 
                     if(cols < 2){
-                        leftPadding = (width-320)/2 < 15 ? 15 : (width-320)/2;
+                        leftPadding = (width-320)/2 < 10 ? 10 : (width-320)/2;
                         return;
                     }
 
                     leftPadding = (width - ((320*cols) + ((cols-1)*spacing)))/2;
 
                 }
+
+                // home
+                Item {
+                    width: parent.width - (parent.leftPadding * 2)
+                    height: 35
+
+                    Text {
+                        width: contentWidth
+                        height: parent.height
+                        text: "Home"
+                        font.family: AppUtil.font1.name
+                        font.pixelSize: 23
+                        font.bold: true
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+
 
                 // categories
                 Item {
@@ -151,6 +172,9 @@ FelgoPage {
                 break;
             case 1:
                 root.navigationStack.popAllExceptFirstAndPush(Qt.resolvedUrl("Foods.qml"));
+                break;
+            case 2:
+                root.navigationStack.popAllExceptFirstAndPush(Qt.resolvedUrl("Cart.qml"));
                 break;
             default:
                 break;

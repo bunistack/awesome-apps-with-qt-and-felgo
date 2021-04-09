@@ -7,6 +7,10 @@
 
 int main(int argc, char *argv[])
 {
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QCoreApplication::setOrganizationName("bunistack");
+    QCoreApplication::setOrganizationDomain("bunistack.com");
+    QCoreApplication::setApplicationName("Foodie");
 
     QApplication app(argc, argv);
 

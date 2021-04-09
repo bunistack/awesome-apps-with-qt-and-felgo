@@ -26,7 +26,6 @@
         <file>assets/images/icons/home_grey.png</file>
         <file>assets/images/icons/hot_breakfast_grey.png</file>
         <file>assets/images/icons/mastercard_grey.png</file>
-        <file>assets/images/icons/mobile_shopping_grey.png</file>
         <file>qml/controls/CustomScrollView.qml</file>
         <file>assets/images/icons/pastel/pizza_pastel.png</file>
         <file>qml/models/CategoriesModel.qml</file>
@@ -59,5 +58,18 @@
         <file>assets/images/icons/add_to_cart_grey.png</file>
         <file>assets/images/icons/rating_grey.png</file>
         <file>qml/pages/Foods.qml</file>
+        <file>qml/components/FoodCategoryList.qml</file>
+        <file>assets/images/icons/shopping_cart_grey.png</file>
+        <file>qml/components/CartButton.qml</file>
+        <file>qml/controls/ColoredImage.qml</file>
+        <file>qml/pages/Cart.qml</file>
+        <file>qml/components/CartListCard.qml</file>
+        <file>qml/controls/IconButton.qml</file>
+        <file>qml/controls/SpinBoxStyle1.qml</file>
+        <file>assets/images/icons/trash_grey.png</file>
+        <file>qml/controls/EmptyPage.qml</file>
+        <file>assets/images/illustrations/empty_cart.svg</file>
+        <file>assets/images/icons/minus_grey.png</file>
+        <file>assets/images/icons/plus_grey.png</file>
     </qresource>
 </RCC>

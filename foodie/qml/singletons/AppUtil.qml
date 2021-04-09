@@ -14,6 +14,7 @@ QtObject {
      * function definitions start here
     **********************************************/
 
+    // generates a random integer
     function randomInteger(limit){
         return Math.floor(Math.random() * limit);
     }

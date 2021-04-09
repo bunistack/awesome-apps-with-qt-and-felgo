@@ -12,7 +12,7 @@ FelgoPage {
     property real scrollPosition: 0
 
     Component.onCompleted: {
-
+        sortFoodCategories();
     }
 
     Column{
@@ -51,6 +51,51 @@ FelgoPage {
             id: swipeView
             width: parent.width
             height: parent.height - header.height
+
+            Repeater{
+                model: foodCategories
+
+                FoodCategoryList{
+                    foodsModel: foods
+                    categoryName: category
+                }
+            }
+        }
+    }
+
+    ListModel{
+        id: foodCategories
+    }
+
+    FoodsListModel{
+        id: foodsListModel
+    }
+
+    function sortFoodCategories(){
+
+        let categories = {};
+
+        for(let i=0; i<foodsListModel.count; i++){
+
+            let food = foodsListModel.get(i);
+
+            if(categories.hasOwnProperty(food.category)){
+                categories[food.category].push(food);
+            }else{
+                categories[food.category] = [];
+                categories[food.category].push(food);
+            }
+        }
+
+        for(const category in categories){
+
+            let foodCategory = {
+                category: category,
+                foods: categories[category]
+            }
+
+            foodCategories.append(foodCategory)
+
         }
     }
 

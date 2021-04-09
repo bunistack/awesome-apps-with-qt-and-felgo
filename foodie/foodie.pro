@@ -1,3 +1,5 @@
+QT += svg xml
+
 # allows to add DEPLOYMENTFOLDERS and links to the Felgo library and QtCreator auto-completion
 CONFIG += felgo
 
