@@ -1,2 +1,3 @@
-# awesome-qml-components
-Repository for nicely styled qml components
+# app-dev-basics-qt-felgo
+Repository for the course app-dev-basics-qt-felgo
+
