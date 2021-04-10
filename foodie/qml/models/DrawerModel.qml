@@ -17,9 +17,4 @@ ListModel {
         itemIcon: "qrc:/assets/images/icons/shopping_cart_grey.png"
     }
 
-    ListElement{
-        itemText: "Payments"
-        itemIcon: "qrc:/assets/images/icons/mastercard_grey.png"
-    }
-
 }

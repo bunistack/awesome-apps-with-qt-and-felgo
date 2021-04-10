@@ -42,7 +42,7 @@ ShadowedRectangle {
 
             Text {
                 width: parent.width
-                text: "Ksh. " + Utility.currencyFormat(parseFloat(price))
+                text: "Ksh. " + Utility.currencyFormat(price)
                 font.family: AppUtil.font1.name
                 font.pixelSize: 15
             }

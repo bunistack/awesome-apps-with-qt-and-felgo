@@ -25,7 +25,6 @@
         <file>qml/models/DrawerModel.qml</file>
         <file>assets/images/icons/home_grey.png</file>
         <file>assets/images/icons/hot_breakfast_grey.png</file>
-        <file>assets/images/icons/mastercard_grey.png</file>
         <file>qml/controls/CustomScrollView.qml</file>
         <file>assets/images/icons/pastel/pizza_pastel.png</file>
         <file>qml/models/CategoriesModel.qml</file>
@@ -71,5 +70,11 @@
         <file>assets/images/illustrations/empty_cart.svg</file>
         <file>assets/images/icons/minus_grey.png</file>
         <file>assets/images/icons/plus_grey.png</file>
+        <file>qml/components/ConfirmOrder.qml</file>
+        <file>qml/controls/RadioButtonStyle1.qml</file>
+        <file>assets/images/icons/store_grey.png</file>
+        <file>assets/images/icons/color/paypal_color.png</file>
+        <file>assets/images/icons/color/visa_color.png</file>
+        <file>qml/controls/ImageMessageDialog.qml</file>
     </qresource>
 </RCC>

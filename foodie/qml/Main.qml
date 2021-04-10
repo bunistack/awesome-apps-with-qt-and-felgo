@@ -15,6 +15,9 @@ App {
     property bool showCartButton: false
 
     property int totalCartQuantity: 0
+    property real subTotal: 0
+    property real vat: 0.16 * subTotal
+    property real cartTotal: subTotal + vat
 
     onSplashScreenFinished: {
         mainNavigationStack.push(Qt.resolvedUrl("./pages/OnboardingScreen.qml"));
@@ -72,6 +75,10 @@ App {
         id: navigationDrawer
     }
 
+    ImageMessageDialog{
+        id: imageMessageDialog
+    }
+
     ListModel{
         id: cartListModel
     }
@@ -96,6 +103,11 @@ App {
         computeTotalQuantity();
     }
 
+    function clearCart(){
+        cartListModel.clear();
+        computeTotalQuantity();
+    }
+
     function existsInCart(food){
 
         for(let i=0; i<cartListModel.count; i++){
@@ -113,12 +125,14 @@ App {
     function computeTotalQuantity(){
 
         totalCartQuantity = 0;
+        subTotal = 0;
 
         for(let i=0; i<cartListModel.count; i++){
 
             let cartItem = cartListModel.get(i);
 
             totalCartQuantity += cartItem.quantity;
+            subTotal += (cartItem.quantity * cartItem.price)
         }
 
     }

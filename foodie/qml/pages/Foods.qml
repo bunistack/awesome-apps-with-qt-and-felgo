@@ -29,7 +29,7 @@ FelgoPage {
                 width: childrenRect.width
                 height: parent.height
                 spacing: 15
-                leftPadding: 20
+                leftPadding: 10
 
                 Image {
                     width: 30

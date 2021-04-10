@@ -36,7 +36,7 @@ FelgoPage {
                 width: childrenRect.width
                 height: parent.height
                 spacing: 15
-                leftPadding: 20
+                leftPadding: 10
 
                 Image {
                     width: 30
@@ -138,7 +138,7 @@ FelgoPage {
                                 }
 
                                 Text {
-                                    text: "Ksh. 100.00"
+                                    text: "Ksh. " + Utility.currencyFormat(subTotal)
                                     width: parent.width/2
                                     height: parent.height
                                     verticalAlignment: Text.AlignVCenter
@@ -166,7 +166,7 @@ FelgoPage {
                                 }
 
                                 Text {
-                                    text: "Ksh. 16.00"
+                                    text: "Ksh. " + Utility.currencyFormat(vat)
                                     width: parent.width/2
                                     height: parent.height
                                     verticalAlignment: Text.AlignVCenter
@@ -200,7 +200,7 @@ FelgoPage {
                                 }
 
                                 Text {
-                                    text: "Ksh. 116.00"
+                                    text: "Ksh. " + Utility.currencyFormat(cartTotal)
                                     width: parent.width/2
                                     height: parent.height
                                     verticalAlignment: Text.AlignVCenter
@@ -220,7 +220,7 @@ FelgoPage {
                                 anchors.horizontalCenter: parent.horizontalCenter
 
                                 onClicked: {
-
+                                    confirmOrder.open();
                                 }
                             }
                         }
@@ -241,6 +241,10 @@ FelgoPage {
 
             // end of content
         }
+    }
+
+    ConfirmOrder{
+        id: confirmOrder
     }
 
     // end of root
