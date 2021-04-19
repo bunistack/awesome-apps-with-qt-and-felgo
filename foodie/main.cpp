@@ -5,6 +5,10 @@
 
 #include "utility.h"
 
+#ifdef Q_OS_IOS
+    #include "ios/src/iosutils.h"
+#endif
+
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -18,6 +22,11 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     felgo.initialize(&engine);
+
+#ifdef Q_OS_IOS
+    IOSUtils *iOSUtils = new IOSUtils(&engine);
+    engine.rootContext()->setContextProperty("IOSUtils", iOSUtils);
+#endif
 
     // handles simple utility functions
     Utility *utility = new Utility(&engine);

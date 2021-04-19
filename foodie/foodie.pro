@@ -27,7 +27,7 @@ assetsFolder.source = assets
 
 RESOURCES += resources.qrc
 
-SOURCES += main.cpp \
+SOURCES += main.cpp \     
     utility.cpp
 
 android {
@@ -38,6 +38,9 @@ android {
 ios {
     QMAKE_INFO_PLIST = ios/Project-Info.plist
     OTHER_FILES += $$QMAKE_INFO_PLIST
+
+    HEADERS += ios/src/iosutils.h
+    SOURCES += ios/src/iosutils.mm
 }
 
 # set application icons for win and macx
@@ -48,5 +51,5 @@ macx {
     ICON = macx/app_icon.icns
 }
 
-HEADERS += \
+HEADERS += \     
     utility.h
