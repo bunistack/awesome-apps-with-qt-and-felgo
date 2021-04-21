@@ -15,11 +15,18 @@ Window{
 
     property bool closeAppOnClosed: true
 
+    property int defaultStatusBarStyle: 0
+
     onClosing: {
 
         if(closeAppOnClosed){
             mainWindow.close();
         }
+    }
+
+    Component.onCompleted: {
+        defaultStatusBarStyle = Theme.colors.statusBarStyle;
+        Theme.colors.statusBarStyle = Theme.colors.statusBarStyleHidden;
     }
 
     Rectangle{
@@ -105,6 +112,7 @@ Window{
             mainWindow.opacity = 1;
             closeAppOnClosed = false;
             splashScreen.close();
+            Theme.colors.statusBarStyle = defaultStatusBarStyle;
         }
     }
 }
