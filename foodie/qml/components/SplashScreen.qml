@@ -60,7 +60,7 @@ Window{
                         id: bouncingImage
                         width: 30
                         height: 30
-                        source: "qrc:/assets/images/icons/pastel/medium/beef_burger_psatel.png"
+                        source: "qrc:/assets/images/icons/pastel/medium/beef_burger_pastel.png"
                         sourceSize: Qt.size(width,height)
                         anchors.horizontalCenter: parent.horizontalCenter
                     }

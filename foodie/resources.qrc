@@ -51,7 +51,6 @@
         <file>assets/images/foods/soft-drinks/day-dream-cream-soda.png</file>
         <file>assets/images/foods/soft-drinks/k+-sports-drink.png</file>
         <file>assets/images/foods/soft-drinks/monster-energy-drink.png</file>
-        <file>assets/images/icons/pastel/medium/beef_burger_psatel.png</file>
         <file>qml/components/FoodListCard.qml</file>
         <file>qml/models/FoodsListModel.qml</file>
         <file>assets/images/icons/add_to_cart_grey.png</file>
@@ -76,5 +75,6 @@
         <file>assets/images/icons/color/paypal_color.png</file>
         <file>assets/images/icons/color/visa_color.png</file>
         <file>qml/controls/ImageMessageDialog.qml</file>
+        <file>assets/images/icons/pastel/medium/beef_burger_pastel.png</file>
     </qresource>
 </RCC>
