@@ -26,7 +26,7 @@ Window{
 
     Component.onCompleted: {
         defaultStatusBarStyle = Theme.colors.statusBarStyle;
-        Theme.colors.statusBarStyle = Theme.colors.statusBarStyleHidden;
+        //Theme.colors.statusBarStyle = Theme.colors.statusBarStyleHidden;
     }
 
     Rectangle{
