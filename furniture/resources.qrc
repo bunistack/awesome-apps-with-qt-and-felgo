@@ -3,5 +3,8 @@
         <file>qml/config.json</file>
         <file>qml/Main.qml</file>
         <file>qml/components/SplashScreen.qml</file>
+        <file>qml/singletons/AppUtil.qml</file>
+        <file>assets/images/logos/base-logo.png</file>
+        <file>assets/fonts/VarelaRound-Regular.ttf</file>
     </qresource>
 </RCC>
